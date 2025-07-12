@@ -92,7 +92,7 @@ A complete MERN stack Q&A application with advanced features including real-time
 
 1. **Navigate to client directory**
    ```bash
-   cd client
+   cd clientnew
    ```
 
 2. **Install dependencies**
