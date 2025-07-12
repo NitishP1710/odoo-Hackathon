@@ -1,13 +1,15 @@
 const express = require('express');
-const mongoose = require('mongoose');
 const cors = require('cors');
+const mongoose = require('mongoose');
 const http = require('http');
 const socketIo = require('socket.io');
 require('dotenv').config();
 
 const app = express();
 const server = http.createServer(app);
+
 const io = socketIo(server, {
+
   cors: {
     origin: process.env.CLIENT_URL || "http://localhost:3000",
     methods: ["GET", "POST"]
@@ -16,6 +18,7 @@ const io = socketIo(server, {
 
 // Middleware
 app.use(cors());
+
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
 
